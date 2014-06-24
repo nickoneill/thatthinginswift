@@ -9,6 +9,6 @@ We've all grown to love the [string format specifiers doc](https://developer.app
 
 Things are not all that different in swift. While we can't do this right from the swift String type, we can easily use NSString to accomplish our goals.
 
-> NSString(format: "The current time is %02d:%02d", 10, 4)
+> let timeString = NSString(format: "The current time is %02d:%02d", 10, 4)
 
 And since NSString and String are interchangable in swift, you can easily use the NSString formatters and pass the results right back as swift Strings.
