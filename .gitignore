@@ -1,4 +1,4 @@
 # ignore generated files
 public/
-# ignore cloned themes (themes in use are in layout)
+# ignore cloned themes
 themes/
