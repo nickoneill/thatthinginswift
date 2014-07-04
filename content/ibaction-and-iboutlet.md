@@ -1,6 +1,6 @@
 +++
 title = "IBAction and IBOutlet"
-date = 2014-06-24T10:54:37Z
+date = 2014-06-25T10:54:37Z
 +++
 
 Gone are the days of switching back and forth between .h and .m files! And one of the tangible benefits of a single file per class is easy access to IBAction and IBOutlet declarations.

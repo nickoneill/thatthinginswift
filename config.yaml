@@ -1,7 +1,10 @@
 ---
 baseurl: "http://thatthinginswift.com"
 languageCode: "en-us"
+MetaDataFormat: "yaml"
 title: "that thing in swift"
+Author:
+  Name: "Nick O'Neill"
 params:
   Copyright: "Nick O'Neill"
 ---
