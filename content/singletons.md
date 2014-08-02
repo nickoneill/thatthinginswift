@@ -39,7 +39,7 @@ As noted in [this git repo](https://github.com/hpique/SwiftSingleton), at least 
 The obvious port of `dispatch_once` to Swift is understandable but it seems verbose for a common pattern in a new language. It turns out that we can construct a singleton using type properties in significantly less code:
 
 {{% prism "swift" %}}
-let _SomeManagerSharedInstance = SomeManager()
+private let _SomeManagerSharedInstance = SomeManager()
 
 class SomeManager {
 	class var sharedInstance: SomeManager {
@@ -54,7 +54,7 @@ With usage:
 SomeManager.sharedInstance
 {{% /prism %}}
 
-The downside of this approach is cluttering the global namespace. `_SomeManagerSharedInstance` is always sitting there, waiting for someone to stumble upon it. We can potentially solve this in future Swift releases with private global constants or private class constants, neither of which exist in Swift beta 3.
+<strike>The downside of this approach is cluttering the global namespace. `_SomeManagerSharedInstance` is always sitting there, waiting for someone to stumble upon it. We can potentially solve this in future Swift releases with private global constants or private class constants, neither of which exist in Swift beta 3.</strike> Now that we can declare this shared instance private (as of beta 4), the global will only be available within this file and won't mess with the global namespace.
 
 For now, though, I think this approach is the most understandable. The alternative, nested structs, are confusing and the gain for no global clutter is minor, particularly because we shouldn't have many of these singletons in the first place.
 
