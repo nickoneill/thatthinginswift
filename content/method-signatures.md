@@ -1,6 +1,7 @@
 ---
 date: 2014-07-07T10:02:03-07:00
 title: "Method Signatures"
+description: "Really long method signatures live to see another day"
 ---
 While writing up [remote notifications](/remote-notifications), I noticed that I hadn't covered a relatively simple but important difference between Objective-C and swift. Method signatures seem like the first thing you learn in any language and they're immediately useful knowing just the basics of writing signatures. However, the expectation that swift programmers know how to use slightly different Objective-C methods in our swift code adds some quirkiness to our understanding.
 

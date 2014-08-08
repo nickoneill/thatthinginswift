@@ -1,6 +1,7 @@
 ---
 date: 2014-07-01T10:02:03-07:00
 title: "Remote Notifications"
+description: "Seriously, don't ask for notifications on start up"
 ---
 Remote notifications is an interesting case in swift because we've run into our first deprecated method. While we could technically use the old iOS 7 remote notification methods through the Objective-C bridge, Apple has decided that swift developers are all forward thinking and may not use deprecated methods. Hey, it makes some sense: deprecation is like a warning for existing production code. *You should update this because it'll probably break in the future!* There's no swift production code yet, so no need for the gentle treatment when it comes to old APIs.
 

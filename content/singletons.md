@@ -1,6 +1,7 @@
 ---
 date: 2014-07-10T10:02:03-07:00
 title: "Singletons"
+description: "Yes, singletons still have a place in iOS code"
 ---
 Singletons are a touchy subject in Objective-C. Plenty of people eschew the use of globals entirely and thus have no interest in implementing singletons. I prefer an approach that uses singletons in the cases where they're the best (clearest, most functional) tool for the job, global-haters be damned.
 

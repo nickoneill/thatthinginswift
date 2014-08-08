@@ -1,6 +1,7 @@
 ---
 title: "Dequeueing Table Cells"
 date: "2014-07-30"
+description: "Two new language features combine to form confusion"
 ---
 Dequeueing table cells is almost purely UIKit API calls so why is this something we might have difficulty doing in Swift? In a word, optionals.
 

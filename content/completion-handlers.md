@@ -1,6 +1,7 @@
 +++
 title = "Completion Handlers"
 date = 2014-06-26T10:54:37Z
+description = "Finally, no more bolted on F***ing Block Syntax"
 +++
 
 We do a lot of asynchronous work on mobile devices in an effort to keep our code from blocking the main thread. Previously that meant a lot of delegate methods but more recent advances in Objective-C allowed us to return values to blocks as completion handlers. No doubt, we will have to do a lot of this in swift as well.
