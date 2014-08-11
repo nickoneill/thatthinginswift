@@ -7,25 +7,20 @@ Remote notifications is an interesting case in swift because we've run into our 
 
 Previously, with Objective-C:
 
-{{% prism "objectivec" %}}
-[[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
-{{% /prism %}}
+{{% prism objectivec %}}[[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];{{% /prism %}}
 
 Then you implemented the delegate callbacks:
 
-{{% prism "objectivec" %}}
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+{{% prism objectivec %}}- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	NSLog("Got a %@",deviceToken);
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 	NSLog("Couldn't register: %@",error);
-}
-{{% /prism %}}
+}{{% /prism %}}
 
 Now, in swift code intended for iOS 8, things are a similar:
 
-{{% prism "swift" %}}
-// somewhere when your app starts up
+{{% prism swift %}}// somewhere when your app starts up
 UIApplication.sharedApplication().registerForRemoteNotifications()
 
 // implemented in your application delegate
@@ -35,31 +30,24 @@ func application(application: UIApplication, didRegisterForRemoteNotificationsWi
 
 func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
 	println("Couldn't register: \(error)")
-}
-{{% /prism %}}
+}{{% /prism %}}
 
 **But one more thing!** Your application needs to separately register the types of notifications it can receive and this is the action that prompts the user for permission to show notifications.
 
-{{% prism "swift" %}}
-let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
-UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-{{% /prism %}}
+{{% prism swift %}}let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
+UIApplication.sharedApplication().registerUserNotificationSettings(settings){{% /prism %}}
 
 Remember when these were joined at the hip in iOS 7? Apple is obviously encouraging developers to get the device token on startup, as is natural, and then prompting the user for permission later when you're in the context of something that you want to be notified about. *Seriously kids, don't ask for permission immediately after your app starts up.*
 
 As extra encouragement, Apple has given us a few bonus methods to know more about the state of remote notifications. First, a delegate method that returns when you register your settings:
 
-{{% prism "swift" %}}
-func application(application: UIApplication!, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!) {
+{{% prism swift %}}func application(application: UIApplication!, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!) {
 	// inspect notificationSettings to see what the user said!
-}
-{{% /prism %}}
+}{{% /prism %}}
 
 And secondly, for when you're just curious about the current state of notification permissions:
 
-{{% prism "swift" %}}
-let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
-{{% /prism %}}
+{{% prism swift %}}let settings = UIApplication.sharedApplication().currentUserNotificationSettings(){{% /prism %}}
 
 Since we can request specific permissions (`.Alert`, `.Badge`, `.Sound`) and then inspect the settings immediately after, **we can know what settings the user has allowed and denied on a per-type basis**. This is huge for app developers trying to figure out if a user is getting notifications.
 
