@@ -21,7 +21,7 @@ Pretty simple, we just check if we can dequeue a cell and make a new one if not.
 
 {{% prism swift %}}var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("cell") as? UITableViewCell
 
-if cell != nil {
+if cell == nil {
 	cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
 }
 
