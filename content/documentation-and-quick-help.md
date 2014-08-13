@@ -4,24 +4,33 @@ date: "2014-08-11"
 tags: [""]
 description: ""
 ---
-Beta 5 brought us some notable improvements in optionals and ranges but also the beginning of support for Quick Help in Swift. I didn't realize that Quick Help was a "hidden" feature of Xcode until I mentioned it to someone at the [SF Swift Meetup](www.meetup.com/San-Francisco-SWIFT-developers/) last week who was unfamiliar. As luck would have it, we're now able to discuss how to document Swift in a similar way as our Objective-C.
+Beta 5 brought us some notable improvements in optionals and ranges but also the beginning of Quick Help in Swift. I didn't realize that Quick Help was a "hidden" feature of Xcode until I mentioned it at the [SF Swift Meetup](www.meetup.com/San-Francisco-SWIFT-developers/) last week and realized some were unfamiliar. As luck would have it, we're now able to discuss how to document Swift in a similar way as our Objective-C.
 
-First, if you're unfamiliar with Quick Help in Xcode 5 or 6, find a UIKit class or method in your code and hold your `option` key down while hovering over it. You should see a question mark cursor like this:
+First, a quick introduction to Quick Help in Xcode 5 or 6. Find a UIKit class or method in your code and hold your `option` key down while hovering over it. You should see a question mark cursor like this:
 
 ![The Quick Help cursor](/images/quickhelp-cursor.jpg)
 
-Clicking on 
-
-http://docutils.sourceforge.net/docs/user/rst/quickref.html
-
+Clicking on the that link should bring up a small popover like this one with details on the class or method:
 
 ![The Quick Help menu](/images/quickhelp-menu.jpg)
 
-Third party documentation has changed ever so slightly in Swift and I wanted to take the opportunity to highlight a feature that was introduced in Xcode 5 which I've come to appreciate while using Swift.
+This is all powered by inline documentation; snippets of text that precede class or method definitions and provide a quick look into the important parts of the code, like parameter and return types, or text describing cases where you might use the code.
 
-First, the feature: while documentation-browsing tools like Dash and even the integrated Xcode docs window are great, sometimes you want to have a peek at the documentation for this particular method, not the whole class. Enter Quick Help.
+{{% prism objectivec %}}
+/**
+  * Sends an API request to 4sq for venues around a given location with an optional text search
+*
+  * @param location A CLLocation for the user's current location
+  * @param query An optional search query
+ * @param completion A block which is called with venues, an array of FoursquareVenue objects
+* @return No return value
+ */
+- (void)requestVenues:(CLLocation *location) withQuery:(NSString *query) andCompletion:(void (^)(NSArray *))completion { … }
+{{% /prism %}}
 
-As shown above, option-clicking on almost any Apple-provided class or method in Xcode brings up a nice 
+Apple has lots of words around writing the kind of documentation it calls [**HeaderDoc**](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html) and that format applies for lots of other languages, not just C-like ones.
+
+However, like many things related to Swift, Apple has taken an opportunity to reboot the documentation platform with the new language. We now get something that feels similar, but is not quite the same:
 
 {{% prism swift %}}/**
 Sends an API request to 4sq for venues around a given location with an optional text search
@@ -34,3 +43,9 @@ Sends an API request to 4sq for venues around a given location with an optional 
 */
 func requestVenues(location: CLLocation, query: String?, completion: (venues: [FoursquareVenue]?) -> Void) { … }
 {{% /prism %}}
+
+The formatting is based on an open source project called [reStructuredText](http://docutils.sourceforge.net/docs/user/rst/quickref.html) which, even though I lament the fragmentation of quick markup languages like markdown, seems particularly suited to documentation use.
+
+It’s fairly limited so far. You can create basic text, lists and just a few “field lists” (like `:param:` and `:returns:` - everything you need to add basic documentation -  but I expect more features to show up in the next few betas to round out support for this new documentation format.
+
+As we know, working with Swift is only so 
