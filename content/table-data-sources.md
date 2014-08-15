@@ -1,31 +1,38 @@
 ---
 title: "Dequeueing Table Cells"
 date: "2014-07-30"
-description: "Two new language features combine to form confusion"
+description: "Translating Objective-C to Swift code is not always hard"
 ---
-Dequeueing table cells is almost purely UIKit API calls so why is this something we might have difficulty doing in Swift? In a word, optionals.
+<hr />
+**Hey! Listen!** This article has changed significantly since it was originally posted about downcasting optionals returned from the iOS 6-era `dequeueReusableCellWithIdentifier:`. I've since changed it to contain the correct usage of `dequeueReusableCellWithIdentifier:forIndexPath:` which always returns a cell so that visitors know the correct code to use at first glance.
 
-While optionals as a concept may have been the best way to deal with interop with nils in Objective-C, I've seen a lot of confusion for how to use them in practice and there are a few subtleties in dequeueing table cells that really bring the confusion out in people.
+<!---
+Downcasting a returned `AnyObject` is still a point of potential confusion so I've moved it to [here](http://).
+-->
+<hr />
+
+Dequeueing a table (or collection) cell is almost entirely UIKit API calls and they translate directly to Swift. Since iOS 7 we've been able to dequeue a guarenteed cell (no optionals or nil checks needed, thanks [@olebegemann](https://twitter.com/olebegemann/status/498753146697838593)) as long as we have a prototype cell in the storyboard or have used one of `registerClass:forCellWithReuseIdentifier:` / `registerNib:forCellWithReuseIdentifier:`.
 
 First, in Objective-C:
 
-{{% prism objectivec %}}UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+{{% prism objectivec %}}- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
-if (!cell) {
-	cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-}
+	cell.textLabel.text = @"A cell";
 
-cell.textLabel.text = @"A cell";{{% /prism %}}
+	return cell;
+}{{% /prism %}}
 
-Pretty simple, we just check if we can dequeue a cell and make a new one if not. We do the same thing in Swift but we have to deal with a few unusual concepts:
+Pretty simple, dequeue a reusable cell and customize it to your liking. Then return the cell as requested. The same thing in Swift:
 
-{{% prism swift %}}var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("cell") as? UITableViewCell
+{{% prism swift %}}func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+	let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
 
-if cell == nil {
-	cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-}
+	cell.textLabel.text = "A cell"
 
-cell!.textLabel.text = "A cell"{{% /prism %}}
-First, the potentially dequeued cell might be `nil` so we're already dealing with an optional. Moreover, the dequeued cell might be some `UITableViewCell` subclass so it's actually returned as `AnyObject?` and we downcast it to the class we know it is. The incantation for downcasting an optional is that `as?` we used, a combination of new concepts if you're coming straight from Objective-C and potentially the source of confusion here.
+	return cell
+}{{% /prism %}}
 
-This highlights a big point for people coming from Objective-C to Swift, and one I'll restate often: the APIs really haven't changed and you can use them just about as you did before, but the finer points of Swift takes some getting used to. As long as you understand the reasons why optionals and constructs like `AnyObject` exist in Swift you shouldn't have too much trouble.
+This highlights a big point for people coming from Objective-C to Swift, and one I'll restate often: the APIs haven't changed (or have changed very little) and you can use them just about as you did before. Transitioning to Swift syntax is the hardest part, particularly mentally translating all those Objective-C methods you remember into their equivalents in Swift.
+
+In this case, we don't have to think much about the new constructs in Swift to get to the optimal code. Balancing between the approach that we used in Objective-C and more Swift-like approaches (see [Filling Table Views](/filling-table-view-cells/)) is an important part of our job as developers, particularly during these first few months of Swift.
