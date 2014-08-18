@@ -3,7 +3,9 @@ title: "Quick Help and Third Party Documentation"
 date: "2014-08-13"
 description: "Inline usage docs come to Swift"
 ---
-Beta 5 brought us some notable improvements in optionals and ranges but also the beginning of Quick Help in Swift. I didn't realize that Quick Help was a "hidden" feature of Xcode until I mentioned it at the [SF Swift Meetup](www.meetup.com/San-Francisco-SWIFT-developers/) last week and realized some were unfamiliar. As luck would have it, we're now able to discuss how to document Swift in a similar way as our Objective-C.
+> You may also want to check out the [Swift Documentation](http://nshipster.com/swift-documentation/) post from NSHipster.
+
+Beta 5 brought us some notable improvements in optionals and ranges but also the beginning of Quick Help in Swift. I didn't realize that Quick Help was a "hidden" feature of Xcode until I mentioned it at the [SF Swift Meetup](http://www.meetup.com/San-Francisco-SWIFT-developers/) last week and realized some were unfamiliar. As luck would have it, we're now able to discuss how to document Swift in a similar way as our Objective-C.
 
 First, a quick introduction to Quick Help in Xcode 5 or 6. Find a UIKit class or method in your code and hold your `option` key down while hovering over it. You should see a question mark cursor like this:
 
@@ -42,7 +44,7 @@ Sends an API request to 4sq for venues around a given location with an optional 
 func requestVenues(location: CLLocation, query: String?, completion: (venues: [FoursquareVenue]?) -> Void) { … }
 {{% /prism %}}
 
-The formatting is based on an open source project called [reStructuredText](http://docutils.sourceforge.net/docs/user/rst/quickref.html) which, even though I lament the fragmentation of quick markup languages, seems particularly suited to documentation use with lots of ways to easily link to related code. 
+The formatting is based on an open source project called [reStructuredText](http://docutils.sourceforge.net/docs/user/rst/quickref.html) which, even though I lament the fragmentation of quick markup languages, seems particularly suited to documentation use with lots of ways to easily link to related code.
 
 However, the Swift/Xcode 6 support is limited so far. You can create basic text, lists and just a few “field lists” (like `:param:` and `:returns:`), which is everything you need to add basic documentation but I expect more features to show up in the next few betas to round out support for this new documentation format.
 
