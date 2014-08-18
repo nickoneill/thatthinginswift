@@ -6,7 +6,7 @@ description: "Switches and tuples make filling table views easy again"
 ---
 Here's a great example of how the language features in Swift take an old pattern and put a fresh spin on it - that is, they let us use less code and write more clearly.
 
-If you've filled a `UITableView` programmatically that has the slightly bit of structure to it then you've problem run into Objective-C code that looks like this (from a contact page):
+If you've filled a `UITableView` programmatically that has the slightest bit of structure to it then you've probably run into Objective-C code that looks like this (from a contact page):
 
 {{% prism objectivec %}}if (indexPath.section == 0) {
     if (indexPath.row == 0) {
