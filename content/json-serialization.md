@@ -11,7 +11,7 @@ The basics, in Objective-C:
 {{% prism objectivec %}}NSData *data = ...some data loaded...;
 NSError *jsonError = nil;
 NSDictionary *decodedData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-if (!error) {
+if (!jsonError) {
   NSLog(decodedData[@"title"]);
 }{{% /prism %}}
 
