@@ -25,7 +25,7 @@ UIApplication.sharedApplication().registerForRemoteNotifications()
 
 // implemented in your application delegate
 func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
-	println("Got token data!",deviceToken)
+	println("Got token data! \(deviceToken)")
 }
 
 func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
