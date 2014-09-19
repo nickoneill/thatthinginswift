@@ -6,7 +6,7 @@ description: "Know your type differences and use the right one"
 
 {{% playground tips="Switch the definition of an object between struct and class to see how the data changes" filename="ValueAndReferenceTypes.zip" %}}
 
-Since we took a rather long hiatus before iOS 8 rolled out, I figure we would start again with a simple introduction to value and reference types in Swift as well as a test of our new demo playgrounds. <!-- This will also serve as a great intro to the fundamentals needed to grasp the ideas in [Mutability and Synchronization](/mutability-and-synchronization), a slightly more complex topic. -->
+Since we took a rather long hiatus before iOS 8 rolled out, I figure we would start again with a simple introduction to value and reference types in Swift as well as a test of our new demo playgrounds.
 
 A couple weeks ago, Apple posted a short article about the difference between [value and reference types in Swift](https://developer.apple.com/swift/blog/?id=10). **The short and long of it is that `struct`, `enum` and `tuple` objects are all value types and objects defined as `class` are reference types.** Value type data is copied when you assign it around whereas reference type data is passed by reference and points to the same underlying data.
 
