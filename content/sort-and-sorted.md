@@ -1,7 +1,6 @@
 ---
 title: Sort and Sorted
 date: 2015-02-11
-draft: true
 description: Easy sorting in Swift
 ---
 I usually dread sorting in Objective-C because there are too many different ways to do it and too many magical syntax items that I can never remember. Swift simplifies a bit, building a more tightly coupled sorting mechanism into `Array`, though still relying on magical syntax comparators in some more complex cases.
@@ -22,14 +21,13 @@ Here’s a simple example:
         return NSOrderedSame;
     }];
 {{% /prism %}}
-
 I have a couple issues with this. Most obvious to me is the usage of `id` in the comparison block. Objective-C doesn't know the type information of the elements in the `NSArray` so it makes sense that you have to figure out what they are yourself. Lots of opportunity for runtime crashes here.
 
 Second is the incredible verbosity of the block. You have to cover every result yourself and the compiler gives you absolutely no help.
 
 Since we can use our standard Objective-C types in Swift, we could rewrite this exact thing with some `AnyObject` substitutions and slightly different syntax. It's unpleasant, so I won't even give you an example. However, Swift gives us a couple new tools that are better suited for the task.
 
-If you were going to rewrite a way to sort things in Swift, you might end up with the `sorted` function: 
+If you were going to rewrite a way to sort things in Swift, you might end up with the `sorted` function:
 
 {{% prism swift %}}
 func sortFunc(num1: Int, num2: Int) -> Bool {
