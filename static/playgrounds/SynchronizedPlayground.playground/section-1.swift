@@ -16,12 +16,21 @@ func synchronized(toLock: AnyObject, closure: () -> Void) {
     objc_sync_exit(toLock)
 }
 
+prefix func 🔒 (toLock: AnyObject, closure: @autoclosure () -> Void) {
+    objc_sync_enter(toLock)
+    closure()
+    objc_sync_exit(toLock)
+}
+
+
 // build an initial array with some data
 var someArray: [String] = Array(count: 2, repeatedValue: "apple")
 
 // this function simply loops x times and appends a passed string
 // to the array, using our Swift version of @synchronized
 func appendToArray(string: String) {
+    🔒(someArray, someArray.append(string))
+    
     synchronized(someArray) {
         for i in 0..<2 {
             someArray.append(string)
