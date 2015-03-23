@@ -10,10 +10,12 @@ import XCPlayground
 
 // our Swift version of synchronized
 // comment out the enter/exit lines to see unusual results
-func synchronized(toLock: AnyObject, closure: () -> Void) {
-    objc_sync_enter(toLock)
+func synchronized(toLock: NSLock, closure: () -> Void) {
+//    objc_sync_enter(toLock)
+//    toLock.lock()
     closure()
-    objc_sync_exit(toLock)
+//    toLock.unlock()
+//    objc_sync_exit(toLock)
 }
 
 prefix func 🔒 (toLock: AnyObject, closure: @autoclosure () -> Void) {
@@ -24,13 +26,13 @@ prefix func 🔒 (toLock: AnyObject, closure: @autoclosure () -> Void) {
 
 
 // build an initial array with some data
-var someArray: [String] = Array(count: 2, repeatedValue: "apple")
+var someArray: [String] = Array(count: 2, repeatedValue: "xxx")
 
 // this function simply loops x times and appends a passed string
 // to the array, using our Swift version of @synchronized
 func appendToArray(string: String) {
     🔒(someArray, someArray.append(string))
-    
+
     synchronized(someArray) {
         for i in 0..<2 {
             someArray.append(string)
@@ -43,11 +45,11 @@ func appendToArray(string: String) {
 // starting two background threads to append things to the same array
 let queuePriority = DISPATCH_QUEUE_PRIORITY_BACKGROUND
 dispatch_async(dispatch_get_global_queue(queuePriority, 0)) {
-    appendToArray("banana")
+    appendToArray("zzz")
 }
 
 dispatch_async(dispatch_get_global_queue(queuePriority, 0)) {
-    appendToArray("orange")
+    appendToArray("vvv")
 }
 
 // after 2 seconds, print out the resulting array
