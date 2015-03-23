@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # generate blog with theme
-hugo_0.11_darwin_amd64 --theme=herring-cove-swift
+hugo --theme=herring-cove-swift
 
 # send everything in public to the root of blog
 # a: archive mode
