@@ -3,7 +3,7 @@ date: 2015-03-23T17:56:14-07:00
 title: "Switches and Optionals"
 description: "Switches provide a nice shortcut for nil testing"
 ---
-I may be straying from the traditional “things you know how how to do in Objective-C” a bit -- unwrapping is not a thing we needed before Swift -- but I can’t help but share this pattern I’ve been frequently using.
+I may be straying from our traditional “things you know how how to do in Objective-C" bit -- unwrapping is not a thing we needed before Swift -- but I can’t help but share this pattern I’ve been using.
 
 As I get more and more accustomed to the places that optionals belong in my Swift code, I keep finding new ways to handle those clunky spots where they feel unwieldy. This is great because I really like the idea of optionals. There are so many ideas in programming that can be thought of as either always having a value or sometimes being nil, so the distinction is apt. Finding ways to handle optionals gracefully makes me even more convinced they’re a great choice for Swift.
 
