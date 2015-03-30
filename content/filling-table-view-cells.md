@@ -1,7 +1,7 @@
 ---
 title: "Filling Table Views"
 date: "2014-08-07"
-tags: [""]
+htmltitle: "Filling Table Views in Swift"
 description: "Switches and tuples make filling table views easy again"
 ---
 Here's a great example of how the language features in Swift take an old pattern and put a fresh spin on it - that is, they let us use less code and write more clearly.

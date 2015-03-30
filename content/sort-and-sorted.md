@@ -1,6 +1,7 @@
 ---
 title: Sort and Sorted
 date: 2015-02-11
+htmltitle: "Sorting Arrays in Swift"
 description: Easy sorting in Swift
 ---
 I usually dread sorting in Objective-C because there are too many different ways to do it and too many magical syntax items that I can never remember. Swift simplifies a bit, building a more tightly coupled sorting mechanism into `Array`, though still relying on magical syntax comparators in some more complex cases.

@@ -1,6 +1,7 @@
 ---
 title: "Dequeueing Table Cells"
 date: "2014-07-30"
+htmltitle: "Dequeueing Table View Cells in Swift"
 description: "Translating Objective-C to Swift code is not always hard"
 ---
 <hr />

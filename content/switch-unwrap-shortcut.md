@@ -1,6 +1,7 @@
 ---
 date: 2015-03-23T17:56:14-07:00
 title: "Switches and Optionals"
+htmltitle: "Using Switches and Optionals in Swift"
 description: "Switches provide a nice shortcut for nil testing"
 ---
 I may be straying from our traditional “things you know how how to do in Objective-C" bit -- unwrapping is not a thing we needed before Swift -- but I can’t help but share this pattern I’ve been using.

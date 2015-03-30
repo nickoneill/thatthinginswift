@@ -1,7 +1,6 @@
 ---
 title: "Learning to Love Optionals"
 date: "2014-08-10"
-tags: [""]
 draft: true
 description: ""
 ---

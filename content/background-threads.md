@@ -1,6 +1,7 @@
 ---
 date: 2014-07-12T17:56:14-07:00
 title: "Background Threads"
+htmltitle: "Background Threads in Swift"
 description: "dispatch_async plus a nice custom operator"
 ---
 I was going to call this "Grand Central Dispatch" but then I remembered this is supposed to be digestible chunks of information about Swift, not huge diatribes about the state of such-and-such tool. So, let's continue with the simple task we have set out for us: moving to and from the background thread.

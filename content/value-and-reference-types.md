@@ -1,5 +1,6 @@
 ---
 title: Value and Reference Types
+htmltitle: "Value and Reference Types in Swift"
 date: "2014-09-17"
 description: "Know your type differences and use the right one"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Quick Help and Third Party Documentation"
+htmltitle: "Xcode Quick Help and Documentation in Swift"
 date: "2014-08-13"
 description: "Inline usage docs come to Swift"
 ---
