@@ -68,6 +68,19 @@ There are a few more powerful uses for `switch` along these lines, including con
 
 The Swift `switch` continues to amaze and I doubt this will be the last time I bring it up on this blog. We’re almost a year into our public understanding of Swift and new ways to solve problems are still being “discovered.” That’s pretty great.
 
+One more great example from [@mmertsock](https://twitter.com/mmertsock). Say you want `default`-like behavior with an optional but without nesting your switches (one for the nil case, one for a non-nil catch-all case). You can use `.Some(_)` to match all cases where the switch is non-nil but still has any value!
+
+{{% prism swift %}}
+switch (self.status) {
+case .Some(.Available):
+  println("status is available")
+case .Some(_):
+  println("some other non-nil status")
+case .None:
+  println("status was nil...")
+}
+{{% /prism %}}
+
 ---
 
 <sup><span id="noteone">[1]</span></sup> OK, I admit that this won’t be needed for long since Swift 1.2 will let us [chain `if let` optionals](http://nshipster.com/swift-1.2/) but you might still use a `switch` for this considering how powerful and clear they are over lots of nested `if`s and `else`s.
