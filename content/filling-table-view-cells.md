@@ -8,7 +8,8 @@ Here's a great example of how the language features in Swift take an old pattern
 
 If you've filled a `UITableView` programmatically that has the slightest bit of structure to it then you've probably run into Objective-C code that looks like this (from a contact page):
 
-{{% prism objectivec %}}if (indexPath.section == 0) {
+{{< highlight objectivec >}}
+if (indexPath.section == 0) {
     if (indexPath.row == 0) {
         cell.textLabel.text = @"Twitter"
     } else if (indexPath.row == 1) {
@@ -24,7 +25,8 @@ If you've filled a `UITableView` programmatically that has the slightest bit of 
     } else {
         cell.textLabel.text = @"namethree"
     }
-}{{% /prism %}}
+}
+{{< /highlight >}}
 
 The first problem with this is the nested if/else blocks. This is a mess, particularly when the code changes indentations so frequently. It's just plain hard to read. Secondly, there's a lot of extraneous code in here. We could break `indexPath.section` and `indexPath.row` out into variables to reduce some of it but it doesn't reduce the amount of code we're writing overall by that much. Lastly, the indexes that we're accessing are largely hidden. You have to follow the indentations to know where section 0 ends and then we use blanket else statements for the last item to reduce code at the expense of clarity. You really have to know the structure of the table view before you start editing this code.
 
@@ -32,7 +34,8 @@ My first instinct when rewriting this code was to use Swift's improved `switch` 
 
 We can define a standin tuple that takes the `indexPath` values and then is easily created at each case statement with minimal code:
 
-{{% prism swift %}}let shortPath = (indexPath.section, indexPath.row)
+{{< highlight swift >}}
+let shortPath = (indexPath.section, indexPath.row)
 switch shortPath {
 case (0, 0):
     cell.textLabel.text = "Twitter"
@@ -48,7 +51,8 @@ case (1, 2):
     cell.textLabel.text = "namethree"
 default:
     cell.textLabel.text = "¯\\_(ツ)_/¯"
-}{{% /prism %}}
+}
+{{< /highlight >}}
 
 Note that we have to do *something* for the default case because switch statements must be exhaustive and we probably shouldn't list every tuple of two integers. Instead we'll just provide a default cell text that looks obviously broken if we run into it.
 

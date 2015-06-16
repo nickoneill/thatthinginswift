@@ -17,14 +17,14 @@ But let’s say you *know* you’re going to run into these issues either becaus
 
 In Objective-C, we used the `@synchronized` keyword to prevent multiple threads from accessing a certain chunk of code at the same time:
 
-{{% prism objectivec %}}
+{{< highlight objectivec >}}
 NSMutableArray *array = @[… some data …];
 
 /* later, called from a few threads */
 @synchronized(array) {
 	array.append
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 Even though we don't have access to the same `@synchronized` keyword, we can access the underlying API and form our own easy to use closure-based locking mechanism.
 

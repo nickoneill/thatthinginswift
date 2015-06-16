@@ -18,7 +18,8 @@ Clicking on the that link should bring up a small popover like this one with det
 
 This is all powered by inline documentation; snippets of text that precede class or method definitions and provide a quick look into the important parts of the code, like parameter and return types, or text describing cases where you might use the code. In Objective-C, there were a few different formats that you could use but in general documentation looked like this:
 
-{{% prism objectivec %}}/**
+{{< highlight objectivec >}}
+/**
   * Sends an API request to 4sq for venues around a given location with an optional text search
   *
   * @param location A CLLocation for the user's current location
@@ -27,13 +28,14 @@ This is all powered by inline documentation; snippets of text that precede class
   * @return No return value
 */
 - (void)requestVenues:(CLLocation *location) withQuery:(NSString *query) andCompletion:(void (^)(NSArray *))completion { … }
-{{% /prism %}}
+{{< /highlight >}}
 
 Apple has lots of words around writing the kind of documentation it calls [**HeaderDoc**](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html) and that format applies for lots of other languages, not just C-like ones.
 
 However, like many things related to Swift, Apple has taken an opportunity to reboot the documentation platform with the new language. With Swift, we now have something that feels similar, but is not quite the same:
 
-{{% prism swift %}}/**
+{{< highlight swift >}}
+/**
 Sends an API request to 4sq for venues around a given location with an optional text search
 
 :param: location    A CLLocation for the user's current location
@@ -43,7 +45,7 @@ Sends an API request to 4sq for venues around a given location with an optional 
 :returns: No return value
 */
 func requestVenues(location: CLLocation, query: String?, completion: (venues: [FoursquareVenue]?) -> Void) { … }
-{{% /prism %}}
+{{< /highlight >}}
 
 The formatting is based on an open source project called [reStructuredText](http://docutils.sourceforge.net/docs/user/rst/quickref.html) which, even though I lament the fragmentation of quick markup languages, seems particularly suited to documentation use with lots of ways to easily link to related code.
 
