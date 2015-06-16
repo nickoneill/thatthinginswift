@@ -36,8 +36,7 @@ As noted in [this github repo](https://github.com/hpique/SwiftSingleton), at lea
 
 The obvious port of `dispatch_once` to Swift is understandable but it seems verbose for a common pattern in a new language. It turns out that we can construct a singleton using type properties in significantly less code:
 
-{{% prism swift %}}private let _SomeManagerSharedInstance = SomeManager()
-
+{{% prism swift %}}
 class SomeManager {
     static let sharedInstance = SomeManager()
 }{{% /prism %}}

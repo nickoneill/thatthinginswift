@@ -28,7 +28,7 @@ The result may look complex (as all functions-in-function-declarations do) but i
 }
 {{% /prism %}}
 
-The completion closure here is just a function that takes a string and returns  void. At first this sounds backwards - this takes a string as an argument? We want to *return* a string! - but we're don't really want to return a string, that would mean we've blocked until we return. Instead, we're calling a function that the callee has given us and providing them with the associated arguments.
+The completion closure here is just a function that takes a string and returns  void. At first this sounds backwards - this takes a string as an argument? We want to *return* a string! - but we don't really want to return a string, that would mean we've blocked until we return. Instead, we're calling a function that the callee has given us and providing them with the associated arguments.
 
 Using completion handlers is easier than declaring them though, thanks to a clever way to shorten function calls from the swift team:
 
