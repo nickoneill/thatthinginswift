@@ -9,21 +9,25 @@ JSON serialization is essentially unchanged in Swift for one reason: it happens 
 
 The basics, in Objective-C:
 
-{{% prism objectivec %}}NSData *data = ...some data loaded...;
+{{< highlight objectivec >}}
+NSData *data = ...some data loaded...;
 NSError *jsonError = nil;
 NSDictionary *decodedData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 if (!jsonError) {
   NSLog(decodedData[@"title"]);
-}{{% /prism %}}
+}
+{{< /highlight >}}
 
 Lots of boilerplate, but still pretty simple. Now the same, in Swift:
 
-{{% prism swift %}}let data: NSData = ...some data loaded...
+{{< highlight swift >}}
+let data: NSData = ...some data loaded...
 let jsonError: NSError?
 let decodedJson = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError!) as Dictionary<String, AnyObject>
 if !jsonError {
   println(decodedJson["title"])
-}{{% /prism %}}
+}
+{{< /highlight >}}
 
 Yes, just like before when we had to know we were going to get back an `NSDictionary` from `JSONObjectWithData:options:error:`, we still have to cast the return from `AnyObject` to a `Dictionary<String, AnyObject>` (or whatever type is appropriate). Such are the perils of working with JSON. We could inspect the return type before using it for a more generic case but you'll probably use the simpler example above when you already know the expected type.
 

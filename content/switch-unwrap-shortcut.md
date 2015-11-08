@@ -12,7 +12,7 @@ One of those spots where optionals were feeling clunky was configuring `UITableV
 
 Here’s how it might have looked before:
 
-{{% prism swift %}}
+{{< highlight swift >}}
 // somewhere else we've defined our enum as such:
 enum Status {
   case Available
@@ -32,7 +32,7 @@ if let status = self.status {
 } else {
   println("no status")
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 Fortunately, we can combine these two statements with some interesting syntax and then extend that to deal with optionals in different ways.
 
@@ -40,14 +40,14 @@ We know that optionals are actually an `enum` type made up of `.Some(A)` and `.N
 
 We can use this in our `switch` to check optionals without having to do that same step beforehand. Try this:
 
-{{% prism swift %}}
+{{< highlight swift >}}
 switch self.status {
 case .Some:
   println("a status")
 default:
   println("no status")
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 Sanity restored to our indentation. I mentioned configuring `UITableViewCell` instances previously because you need to look at your state in a few different places like `cellForRowAtIndexPath:` and `didSelectCellAtIndexPath:`. Trimming these down a level of indentation makes this feel like less of a pain and often you can combine two common states (no state and unknown state) in a single case rather than both the outer `if let` statement and the inner `switch`.
 
@@ -55,14 +55,14 @@ Now the extended part: even if you don’t configure your table views this way, 
 
 Here’s a situation where you have multiple optional inputs to validate and not a lot of code needed to do it<sup><a href="#noteone">[1]</a></sup>:
 
-{{% prism swift %}}
+{{< highlight swift >}}
 switch (self.textValidation, self.passwordValidation) {
 case (.Some, .Some):
   println("both look good!")
 default:
   println("something was nil...")
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 There are a few more powerful uses for `switch` along these lines, including conditional cases with `where` and ignoring inputs with `_` but hopefully we'll get to those in another post.
 
@@ -70,7 +70,7 @@ The Swift `switch` continues to amaze and I doubt this will be the last time I b
 
 One more great example from [@mmertsock](https://twitter.com/mmertsock). Say you want `default`-like behavior with an optional but without nesting your switches (one for the nil case, one for a non-nil catch-all case). You can use `.Some(_)` to match all cases where the switch is non-nil but still has any value!
 
-{{% prism swift %}}
+{{< highlight swift >}}
 switch (self.status) {
 case .Some(.Available):
   println("status is available")
@@ -79,7 +79,7 @@ case .Some(_):
 case .None:
   println("status was nil...")
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 ---
 

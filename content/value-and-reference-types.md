@@ -13,7 +13,8 @@ A couple weeks ago, Apple posted a short article about the difference between [v
 
 We’re used to dealing with reference types in Objective-C. For those of you coming from an Objective-C background, this example should not strike you as surprising:
 
-{{% prism objectivec %}}DemoObject *obj1 = [[DemoObject alloc] init];
+{{< highlight objectivec >}}
+DemoObject *obj1 = [[DemoObject alloc] init];
 obj1.name = @"hello";
 
 DemoObject *obj2 = obj1;
@@ -21,14 +22,16 @@ obj2.name = @"what";
 
 // prints “what what”
 NSLog(@"%@ %@",obj1.name,obj2.name);
-{{% /prism %}}
+{{< /highlight >}}
 
 Though it’s possible to pass around values in Objective-C, you’re probably used to this kind of thing because you deal with mostly `NSObject` subclasses, not a lot of base C types.
 
 The difference in Swift is expressed succinctly in the *Value and Reference Types* post but I’ll reproduce the above example in Swift to demonstrate.
 
 As a struct (i.e. a **value** type):
-{{% prism swift %}}struct DemoObject {
+
+{{< highlight swift >}}
+struct DemoObject {
     var name = "hello"
 }
 
@@ -39,10 +42,12 @@ obj2.name = "what"
 
 // prints “hello what”
 println("\(obj1.name) \(obj2.name)")
-{{% /prism %}}
+{{< /highlight >}}
 
 And as a class (i.e. a **reference** type):
-{{% prism swift %}}class DemoObject {
+
+{{< highlight swift >}}
+class DemoObject {
     var name = "hello"
 }
 
@@ -53,7 +58,7 @@ obj2.name = "what"
 
 // prints “what what”
 println("\(obj1.name) \(obj2.name)")
-{{% /prism %}}
+{{< /highlight >}}
 
 Literally, the only thing different between the two examples is `struct` and `class` in the object definition. This effect is best seen for yourself. Download the example playground at the top of this post and try it out yourself.
 

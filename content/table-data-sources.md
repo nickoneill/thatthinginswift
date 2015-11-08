@@ -16,23 +16,27 @@ Dequeueing a table (or collection) cell is almost entirely UIKit API calls and t
 
 First, in Objective-C:
 
-{{% prism objectivec %}}- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+{{< highlight objectivec >}}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
 	cell.textLabel.text = @"A cell";
 
 	return cell;
-}{{% /prism %}}
+}
+{{< /highlight >}}
 
 Pretty simple, dequeue a reusable cell and customize it to your liking. Then return the cell as requested. The same thing in Swift:
 
-{{% prism swift %}}func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+{{< highlight swift >}}
+func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
 	let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
 
 	cell.textLabel.text = "A cell"
 
 	return cell
-}{{% /prism %}}
+}
+{{< /highlight >}}
 
 This highlights a big point for people coming from Objective-C to Swift, and one I'll restate often: the APIs haven't changed (or have changed very little) and you can use them just about as you did before. Transitioning to Swift syntax is the hardest part, particularly mentally translating all those Objective-C methods you remember into their equivalents in Swift.
 

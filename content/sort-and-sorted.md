@@ -10,18 +10,19 @@ The method in Objective-C that feels closest to Swift is probably `sortedArrayUs
 
 Here’s a simple example:
 
-{{% prism objectivec %}}
-    NSArray *numbers = @[@0, @2, @3, @5, @10, @2];
-    NSArray *sortedNumbers = [numbers sortedArrayUsingComparator:^NSComparisonResult(id first, id second) {
-        if (first > second) {
-            return NSOrderedDescending;
-        } else {
-            return NSOrderedAscending;
-        }
+{{< highlight objectivec >}}
+NSArray *numbers = @[@0, @2, @3, @5, @10, @2];
+NSArray *sortedNumbers = [numbers sortedArrayUsingComparator:^NSComparisonResult(id first, id second) {
+  if (first > second) {
+    return NSOrderedDescending;
+  } else {
+    return NSOrderedAscending;
+  }
 
-        return NSOrderedSame;
-    }];
-{{% /prism %}}
+  return NSOrderedSame;
+}];
+{{< /highlight >}}
+
 I have a couple issues with this. Most obvious to me is the usage of `id` in the comparison block. Objective-C doesn't know the type information of the elements in the `NSArray` so it makes sense that you have to figure out what they are yourself. Lots of opportunity for runtime crashes here.
 
 Second is the incredible verbosity of the block. You have to cover every result yourself and the compiler gives you absolutely no help.
@@ -30,14 +31,14 @@ Since we can use our standard Objective-C types in Swift, we could rewrite this 
 
 If you were going to rewrite a way to sort things in Swift, you might end up with the `sorted` function:
 
-{{% prism swift %}}
+{{< highlight swift >}}
 func sortFunc(num1: Int, num2: Int) -> Bool {
     return num1 < num2
 }
 
 let numbers = [0, 2, 3, 5, 10, 2]
 let sortedNumbers = sorted(numbers, sortFunc)
-{{% /prism %}}
+{{< /highlight >}}
 
 This provides us with a lot of type safety and some reduced verbosity. `sorted` knows that `sortFunc` only deals in arrays of type `Int` so we can't create a sorting function where `num1` and `num2` are type `String` and use it here (it won't even compile!).
 
@@ -45,12 +46,12 @@ You'll notice we're also providing a simple `Bool` result as opposed to an `NSCo
 
 I think we can do a little better though. I usually like to sort arrays in place, and sometimes on a property of the objects listed. We can tackle both of these things in an easy to understand and Swifty way with the array method `sort`.
 
-{{% prism swift %}}
+{{< highlight swift >}}
 var numbers = [0, 2, 3, 5, 10, 2]
 numbers.sort {
-    return $0 < $1
+  return $0 < $1
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 By using `sort`, we're sorting in place (the results will be in `numbers`, not another new array), using a trailing closure and removing the explicit types for shorthand argument names `$0` and `$1`. The best part of all this shorthand is that we don't loose any of the type information. The compiler will refuse any operation that we can't do on an `Int`.
 
@@ -58,19 +59,19 @@ All that good stuff aside, the previous example might be better for an array of 
 
 For example, when listing contacts from a user's phone in a `UITableView`, it's nice to provide a quick reference for letters with `sectionIndexTitlesForTableView`. I created a little data structure that looks like this:
 
-{{% prism swift %}}
+{{< highlight swift >}}
 class ContactLetter {
-    let letter: String
-    var contacts: [CellContact]
+  let letter: String
+  var contacts: [CellContact]
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 When sorting an array of `ContactLetter` objects, you want to sort by some internal property, like `letter` in this case. `sort` makes this incredibly easy:
 
-{{% prism swift %}}
+{{< highlight swift >}}
 self.contacts.sort {
-    $0.letter.localizedCaseInsensitiveCompare($1.letter) == NSComparisonResult.OrderedAscending
+  $0.letter.localizedCaseInsensitiveCompare($1.letter) == NSComparisonResult.OrderedAscending
 }
-{{% /prism %}}
+{{< /highlight >}}
 
 And your contact list is nicely sorted for inclusion in your table view.
