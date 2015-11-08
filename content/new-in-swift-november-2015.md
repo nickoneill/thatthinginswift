@@ -30,6 +30,8 @@ Fastlane, by the way, recently joined the Fabric team inside Twitter. Congrats t
 
 - - -
 
+**Swift Summit SF**
+
 Swift Summit was held in San Francisco in the last couple days of October and yours truly presented and attended. A couple notes about code from the conference:
 
 [Kristina Thai's talk on building watch apps](http://www.kristinathai.com/wp-content/uploads/2014/09/Compelling-Watch-App.pdf) hits my biggest complaint about watch apps so far; there are a million watch apps that do nothing useful. Really consider what interaction you're building for before starting your watch app!
@@ -44,6 +46,8 @@ Sam Soffes talked about building tables with [Static](https://github.com/venmo/S
 There were a few more that I don't see online yet, I'll update as I find them.
 
 - - -
+
+**Storage**
 
 Finally, to round out the code from Swift Summit, I live-coded the beginnings of a struct serialization library that I'm calling *Storage*.
 
