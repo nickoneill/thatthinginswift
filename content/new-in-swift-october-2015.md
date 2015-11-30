@@ -1,7 +1,7 @@
 ---
-title: "New in Swift, October 2015"
+title: New in Swift, October 2015
 date: "2015-10-05"
-tags: ["new-in-swift"]
+htmltitle: "New in Swift, October 2015"
 description: "Coach marks, JSON decoding and stack views"
 ---
 Something new! I'm going to try branching out from our traditional Objective-C -> Swift format. To start, there are a lot of interesting Swift libraries popping up which I try to feature periodically [on Twitter](https://twitter.com/objctoswift) but you might miss them there, dear reader. I'll summarize the best every month with a post here.
@@ -36,7 +36,7 @@ struct User: Unboxable {
 
 [**UIStackViewPlayground**](https://github.com/dasdom/UIStackViewPlayground)
 
-I knew stack views (new in the iOS 9 SDK) were supposed to be powerful but this collection of playgrounds really nails the point home. It shows off how to layout the iOS calculator view, a more detailed scientific calculator view, a pretty standard profile view, tweet view, mailbox view and iOS homescreen view. 
+I knew stack views (new in the iOS 9 SDK) were supposed to be powerful but this collection of playgrounds really nails the point home. It shows off how to layout the iOS calculator view, a more detailed scientific calculator view, a pretty standard profile view, tweet view, mailbox view and iOS homescreen view.
 
 I'm convinced that stack views can create anything. Now I just have to convince all my users to upgrade to iOS 9 so I can use them 😕
 

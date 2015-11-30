@@ -14,4 +14,4 @@ hugo --theme=herring-cove-swift
 #		D: keep devices, specials
 # v: verbose
 # z: compress
-rsync -avz public/* 192.241.193.210:/srv/www/thatthinginswift.com/public_html/
+rsync -avz public/* 212.47.240.254:/srv/www/thatthinginswift.com/public_html/
