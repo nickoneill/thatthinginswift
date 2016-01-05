@@ -1,6 +1,6 @@
 ---
 title: "Guard Statements"
-date: "2015-12-30"
+date: "2016-01-04"
 htmltitle: "Guard Statements in Swift"
 description: "Help maintain clarity in view controllers"
 ---
@@ -45,7 +45,7 @@ You'll notice that our server communication function takes non-optional `String`
 
 ### Without `guard`
 
-Without using `guard`, we'd end up with a big pile of code that resembles a [pyramid of doom](http). This doesn't scale well for adding new fields to our form or make for very _readable_ code. Indentation can be difficult to follow, particularly with so many `else` statements at each fork.
+Without using `guard`, we'd end up with a big pile of code that resembles a [pyramid of doom](http://blog.scottlogic.com/2014/12/08/swift-optional-pyramids-of-doom.html). This doesn't scale well for adding new fields to our form or make for very _readable_ code. Indentation can be difficult to follow, particularly with so many `else` statements at each fork.
 
 {{< highlight swift >}}
 func nonguardSubmit() {
