@@ -4,6 +4,8 @@ date: "2016-01-23"
 htmltitle: "Write Your Own API Clients in Swift"
 description: "You probably don't need Alamofire"
 ---
+{{% playground tips="Use this as a base for your favorite API" filename="APIClientPlayground.zip" %}}
+
 Like many iOS developers, I used to use AFNetworking (along the same lines as the Swift counterpart, Alamofire) for all my networking needs. And many developers believe that the existence of such a library must mean that doing something similar is difficult or expensive. And previously it was! `NSURLConnection` in iOS 6 and earlier was a pain to implement and wrapping all that in something more convenient saved you a lot of time.
 
 The truth is that since the introduction of `NSURLSession` in iOS 7, networking is pretty straightforward to do yourself and writing your own API client can simplify your dependencies. If unnecessary dependencies aren't enough to convince you, think about the bugs you can introduce by including 3rd party code that you don't understand or even the size of your binary if you're including a large library just to use a small part of it.
