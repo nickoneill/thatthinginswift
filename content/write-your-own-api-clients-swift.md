@@ -85,7 +85,9 @@ private func clientURLRequest(path: String, params: Dictionary<String, AnyObject
     if let params = params {
         var paramString = ""
         for (key, value) in params {
-            paramString += "\(key)=\(value)&"
+            let escapedKey = key.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+            let escapedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+            paramString += "\(escapedKey)=\(escapedValue)&"
         }
 
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -126,7 +128,7 @@ Perhaps you want to retrieve and store a token once the user is logged in or tur
 
 We can create small functions like this for each of class of requests we'll be making to our API and customize them to provide a consistent and simple experience for the calling code (probably in a view controller somewhere). We don't need to worry about encoding values or generating `NSURL` objects because our thin wrapper takes care of those issues for us.
 
---- 
+---
 
 Here’s what I like about this approach:
 
@@ -145,4 +147,3 @@ The base client is less than 50 lines of code. If I start having to write a ton 
 ---
 
 Using this? Something else instead? How do you write your API clients? Let us know if there's something you would change.
-
