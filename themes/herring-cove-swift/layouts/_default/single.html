@@ -1,0 +1,17 @@
+{{ template "theme/partials/header.html" . }}
+<div id="article">
+  <div class="article-title">{{ .Title }}</div>
+  <!-- <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</small></p> <hr/> -->
+  <div class="post">
+    {{ .Content }}
+    <hr />
+    <p>Questions or comments? Find us on <a href="https://twitter.com/objctoswift">twitter <i class="fa fa-twitter"></i></a> or submit an issue on <a href="https://github.com/nickoneill/thatthinginswift">github <i class="fa fa-github"></i></a></p>
+  </div>
+</div>
+
+<ul class="pager">
+  {{with .Prev}} &nbsp;<li class="previous"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
+  {{with .Next}} &nbsp;<li class="next"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
+</ul>
+
+{{ template "theme/partials/footer.html" }}

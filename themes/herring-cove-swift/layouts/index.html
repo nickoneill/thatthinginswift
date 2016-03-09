@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+  <div class="intro">
+    <h1>What are the things I should know if I want to develop with Swift?</h1>
+    <p>Patterns are your go-to code chunks; the things you know exactly how to do in Objective-C because you've framed code like it in all of your projects. Swift syntax seems to come pretty easy to iOS developers but we still need a lot of exploration to find the best reimplementations our favorite patterns in Swift.</p>
+    <p>We're branching out a bit from our original goal to provide a more general look at what's currently happening in Swift. If it'll make your life easier when working with Swift, we'll cover it here. Except functional stuff, we'll have none of that.</p>
+    <p>Feel free to reach out with questions or tips.</p>
+    <p class="byline">– <a href="https://twitter.com/nickoneill">@nickoneill</a></p>
+  </div>
+  <ul class="posts">
+      {{ range .Data.Pages }}
+      <li>
+        <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+        <p>{{ .Description }}</p>
+        <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+      </li>
+      {{ end }}
+  </ul>
+{{ partial "footer.html" . }}
