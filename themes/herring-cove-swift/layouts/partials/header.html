@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>{{ if .IsPage }}{{ if isset .Params "htmltitle" }}{{ .Params.htmltitle }}{{ else }}{{ .Title }}{{ end }}{{ else }}{{ .Site.Title }}{{ end }}</title>
-  <meta name="referrer" content="always" />
+  <meta name="referrer" content="origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{{ if .IsPage }}{{ .Description }}{{ else }}code for objective-c and swift{{ end }}" />
   <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
