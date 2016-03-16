@@ -551,6 +551,14 @@ img
   letter-spacing: 0.04em;
 }
 
+.post figure {
+  text-align: center;
+  margin: 20px 0;
+}
+.post figure figcaption h4 {
+  font-size: 12px;
+}
+
 .user-social
 {
   color:#c4c4c4;
