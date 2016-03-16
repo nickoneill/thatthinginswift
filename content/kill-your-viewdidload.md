@@ -13,7 +13,7 @@ Here's a traditional viewDidLoad that I would have written when starting in a ne
 {{<highlight swift>}}
 class ViewController: UIViewController {
     let topView = UIView()
-    
+
     override func viewDidLoad() {
         topView.frame = CGRect(0, 0, 100, 200)
         topView.backgroundColor = UIColor.redColor()
@@ -29,15 +29,15 @@ class ViewController: UIViewController {
     let topView = UIView()
     let imageView = UIImageView()
     let goButton = UIButton()
-    
+
     override func viewDidLoad() {
         topView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
         topView.backgroundColor = UIColor.redColor()
         view.addSubview(topView)
-        
+
         imageView.image = UIImage(named: "profile")
         topView.addSubview(imageView)
-        
+
         goButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         goButton.setTitle("GO!", forState: .Normal)
         view.addSubview(goButton)
@@ -93,7 +93,7 @@ I know there are at least a few people who prefer to setup their views in Storyb
 
 I have to admit, I do like setting my views and constraints in Storyboards because I find myself tweaking element spacing constantly and it's much more obvious how to move elements in the Storyboard preview than looking at the simulator and then guessing at hard coded numbers. One thing I *don't* like doing in Storyboards, however, is configuring view details. The right pane in the Storyboard editor is a mess and if you can't find the thing you want to customize, you don't know if it's just hidden or it simply can't be customized in Interface Builder at all.
 
-{{< figure src="http://nickoneill-blog.s3.amazonaws.com/images/Screen%20Shot%202016-03-16%20at%202.18.07%20PM.png" title="Not very clear which of these are defaults or how to share them between elements">}}
+{{< figure src="https://nickoneill-blog.s3.amazonaws.com/images/Screen%20Shot%202016-03-16%20at%202.18.07%20PM.png" title="Not very clear which of these are defaults or how to share them between elements">}}
 
 The solution is to place your views and constraints in Interface Builder and then configure them in code. It's surprisingly easy to do the basics in Storyboards, just to get a sense of what the scene will look like and how everything is hooked up and it improves searchability of your view configuration code. If you're creating common styles across your whole app, you can even customize them in the `didSet` block rather than doing the same configuration each time.
 
