@@ -6,7 +6,7 @@ description: "Our first try livecoding with Swift"
 ---
 Here's an hour-long livecoding video we did last week to make a basic table view app that downloads and parses JSON and builds a set of dynamic, expanding table view cells. Lots of helfup tips and tricks for working with Xcode and Swift are sprinkled throughout. The resulting code is available [on Github](https://github.com/nickoneill/colorbox).
 
-Want to be notified when livecoding is coming up? Follow [That Thing in Swift on Twitter](https://twitter.com/objctoswift).
+Want to be notified when livecoding is coming up? Follow [@nickoneill on Twitter](https://twitter.com/nickoneill).
 
 {{< youtube E0YKylaqrQs >}}
 
@@ -83,7 +83,7 @@ class ColorBoxTableViewCell: UITableViewCell {
 }
 {{< /highlight >}}
 
-The core of the app is a custom API client, based on the [Swift API client](https://thatthinginswift.com/write-your-own-api-clients-swift/) we featured here previously. 
+The core of the app is a custom API client, based on the [Swift API client](https://thatthinginswift.com/write-your-own-api-clients-swift/) we featured here previously.
 
 {{< highlight swift >}}
 class ColorClient {

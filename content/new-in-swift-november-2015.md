@@ -57,4 +57,4 @@ Storage is native opinionated serialization for Swift. Other attempts at seriali
 
 - - -
 
-As always, keep in touch on [Twitter](https://twitter.com/objctoswift) for more of this sort of thing during the rest of the month.
+As always, keep in touch on [Twitter](https://twitter.com/nickoneill) for more of this sort of thing during the rest of the month.
