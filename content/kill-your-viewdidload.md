@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         return button
     }()
 
-    override func wviewDidLoad() {
+    override func viewDidLoad() {
         view.addSubview(topView)
         topView.addSubview(imageView)
         view.addSubview(goButton)
