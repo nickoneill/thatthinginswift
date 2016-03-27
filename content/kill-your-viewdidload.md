@@ -3,6 +3,7 @@ title: "Kill Your Giant viewDidLoad"
 date: "2016-03-16"
 htmltitle: "Kill your viewDidLoad configuration in Swift"
 description: "Move property initialization and configuration into closures"
+previewCode: kill-your-viewdidload
 ---
 Back in Objective-C, we prepared all of our view controller properties in `viewDidLoad` because that was our only option unless we wanted to subclass every element to provide custom initializers. Using some tricks in Swift, we can provide clear, readable initalization outside of `viewDidLoad` that makes our code easier to read and reason about.
 
