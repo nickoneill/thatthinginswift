@@ -3,6 +3,7 @@ title: "IBAction and IBOutlet"
 htmltitle: "Using IBAction and IBOutlet in Xcode for Swift"
 date: 2014-06-25T10:54:37Z
 description: "Hooking storyboards up to your custom code"
+previewCode: ibaction-iboutlet
 ---
 
 Gone are the days of switching back and forth between .h and .m files! And one of the tangible benefits of a single file per class is easy access to IBAction and IBOutlet declarations.

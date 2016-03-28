@@ -3,6 +3,7 @@ title: "JSON Serialization"
 htmltitle: "JSON Serialization in Swift"
 date: 2014-06-28T10:54:37Z
 description: "Ranked highly for methods likely to be updated for Swift"
+previewCode: json-serialization
 ---
 
 JSON serialization is essentially unchanged in Swift for one reason: it happens in foundation objects just as it did in Objective-C. Once we get the results back there are slightly different patterns for dealing with the data which we'll see shortly.

@@ -1,0 +1,4 @@
+func hardProcessingWithString(input: String, completion: (result: String) -> Void) {
+	...
+	completion("we finished!")
+}

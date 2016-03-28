@@ -1,0 +1,8 @@
+class MyViewController: UIViewController {
+  @IBOutlet weak var likeButton: UIButton?
+  @IBOutlet weak var instruction: UILabel?
+
+  @IBAction func likedThis(sender: UIButton) {
+    ...
+  }
+}

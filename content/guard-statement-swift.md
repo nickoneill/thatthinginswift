@@ -3,6 +3,7 @@ title: "Guard Statements"
 date: "2016-01-04"
 htmltitle: "Guard Statements in Swift"
 description: "Help maintain clarity in view controllers"
+previewCode: guard-statements
 ---
 `guard` and `defer` joined us in Swift 2.0 to little fanfare. Both use cases were somewhat obvious initially and plenty of articles were written about how to use these features. `guard` in particular seemed to solve a few sticky problems that Swift programmers got into frequently but a more in-depth exploration of real world usage of these concepts was lacking. We'll cover `guard` today and possibly `defer` in the future.
 

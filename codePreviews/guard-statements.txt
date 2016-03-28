@@ -1,0 +1,8 @@
+func tappedSubmitButton() {
+    guard let name = nameField.text where isValid(name) else {
+        show("name failed validation")
+        return
+    }
+
+    submit(name)
+}

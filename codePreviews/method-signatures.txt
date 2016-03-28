@@ -1,0 +1,7 @@
+func repeatThis(name: String, andDoItThisManyTimes times: Int) {
+    for i in 0..&lt;times {
+        println(name)
+    }
+}
+
+repeatThis("swift", andDoItThisManyTimes: 3)
