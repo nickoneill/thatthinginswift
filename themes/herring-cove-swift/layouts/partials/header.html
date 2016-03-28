@@ -18,9 +18,11 @@
 
   <!-- og properties -->
   <meta property="og:title" content="{{ if .IsPage }}{{ if isset .Params "htmltitle" }}{{ .Params.htmltitle }}{{ else }}{{ .Title }}{{ end }}{{ else }}{{ .Site.Title }}{{ end }}" />
-  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website {{ end }}" />
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
-  <!-- <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" /> -->
+  {{ if .IsPage }}{{ if isset .Params "previewcode" }}
+  <meta property="og:image" content="{{ .Site.BaseURL }}/images/previews/{{ .Params.previewcode }}.png" />
+  {{ end }}{{ end }}
   <meta property="og:description" content="{{ if .IsPage }}{{ .Description }}{{ else }}code for objective-c and swift{{ end }}" />
   <meta property="og:site_name" content="That Thing in Swift" />
 
@@ -28,9 +30,6 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@nickoneill" />
   <meta name="twitter:creator" content="@nickoneill" />
-
-  <!-- facebook -->
-
 </head>
 <body>
   <div id = "wrapper">

@@ -2,6 +2,7 @@
 
 # generates preview images for specified code snippets
 
+# step 1: get basic yaml parsing code from stackoverflow
 function parse_yaml {
    local prefix=$2
    local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')

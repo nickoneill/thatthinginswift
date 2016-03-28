@@ -19,7 +19,6 @@ if len(sys.argv) != 2:
     sys.exit(errno.EACCES)
 
 code = sys.argv[1]
-print("code",code)
 
 # formatter = ImageFormatter(font_name='Monaco')
 formatter = HtmlFormatter(style="monokai")
