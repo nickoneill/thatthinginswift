@@ -21,7 +21,7 @@
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ if .IsPage }}{{ if isset .Params "previewcode" }}
-  <meta property="og:image" content="{{ .Site.BaseURL }}/images/previews/{{ .Params.previewcode }}.png" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/previews/{{ .Params.previewcode }}.png" />
   {{ end }}{{ end }}
   <meta property="og:description" content="{{ if .IsPage }}{{ .Description }}{{ else }}code for objective-c and swift{{ end }}" />
   <meta property="og:site_name" content="That Thing in Swift" />
