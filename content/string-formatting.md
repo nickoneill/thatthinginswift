@@ -3,6 +3,7 @@ title: "String Format Specifiers"
 htmltitle: "String Formatting with NSString in Swift"
 date: 2014-06-24T04:54:37Z
 description: "Ease of use first, fancy formatting second"
+previewCode: string-formatting
 ---
 
 We've all grown to love the [string format specifiers doc](https://developer.apple.com/library/ios/documentation/cocoa/conceptual/Strings/Articles/formatSpecifiers.html) from Apple and because it was baked into NSString, it was super easy to use in Objective-C. Here's something you might do:

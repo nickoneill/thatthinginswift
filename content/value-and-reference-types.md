@@ -41,7 +41,7 @@ var obj2 = obj1
 obj2.name = "what"
 
 // prints “hello what”
-println("\(obj1.name) \(obj2.name)")
+print("\(obj1.name) \(obj2.name)")
 {{< /highlight >}}
 
 And as a class (i.e. a **reference** type):
@@ -57,7 +57,7 @@ var obj2 = obj1
 obj2.name = "what"
 
 // prints “what what”
-println("\(obj1.name) \(obj2.name)")
+print("\(obj1.name) \(obj2.name)")
 {{< /highlight >}}
 
 Literally, the only thing different between the two examples is `struct` and `class` in the object definition. This effect is best seen for yourself. Download the example playground at the top of this post and try it out yourself.

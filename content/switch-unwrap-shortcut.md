@@ -25,12 +25,12 @@ if let status = self.status {
   // and then figure out our status
   switch status {
   case .Available, .Unavailable:
-    println("a status")
+    print("a status")
   default:
-    println("no status")
+    print("no status")
   }
 } else {
-  println("no status")
+  print("no status")
 }
 {{< /highlight >}}
 
@@ -43,9 +43,9 @@ We can use this in our `switch` to check optionals without having to do that sam
 {{< highlight swift >}}
 switch self.status {
 case .Some:
-  println("a status")
+  print("a status")
 default:
-  println("no status")
+  print("no status")
 }
 {{< /highlight >}}
 
@@ -58,9 +58,9 @@ Here’s a situation where you have multiple optional inputs to validate and not
 {{< highlight swift >}}
 switch (self.textValidation, self.passwordValidation) {
 case (.Some, .Some):
-  println("both look good!")
+  print("both look good!")
 default:
-  println("something was nil...")
+  print("something was nil...")
 }
 {{< /highlight >}}
 
@@ -73,11 +73,11 @@ One more great example from [@mmertsock](https://twitter.com/mmertsock). Say you
 {{< highlight swift >}}
 switch (self.status) {
 case .Some(.Available):
-  println("status is available")
+  print("status is available")
 case .Some(_):
-  println("some other non-nil status")
+  print("some other non-nil status")
 case .None:
-  println("status was nil...")
+  print("status was nil...")
 }
 {{< /highlight >}}
 

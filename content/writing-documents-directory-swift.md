@@ -3,6 +3,7 @@ date: 2015-04-15T10:56:14-07:00
 title: "Writing files to the documents directory"
 htmltitle: "Writing files to the documents directory in Swift"
 description: "Where you should write files"
+previewCode: documents-directory
 ---
 Just a quick one today: Pulling the proper documents directory on iOS has always been a pain and a bit of code that I always forget. Here's a reminder for you and I.
 

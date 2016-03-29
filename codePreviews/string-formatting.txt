@@ -1,0 +1,1 @@
+let timeString = String(format: "The current time is %02d:%02d", 10, 4)

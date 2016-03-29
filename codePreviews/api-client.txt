@@ -1,0 +1,9 @@
+let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+let request = NSURLRequest(URL: NSURL(string: "http://yourapi.com/endpoint")!)
+
+let task: NSURLSessionDataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+    if let data = data {
+        let response = NSString(data: data, encoding: NSUTF8StringEncoding)
+        print(response)
+    }
+}.resume()

@@ -20,7 +20,7 @@ A method can be defined like this:
 {{< highlight swift >}}
 func repeatThis(name: String, andDoItThisManyTimes times: Int) {
     for i in 0..&lt;times {
-        println(name)
+        print(name)
     }
 }
 {{< /highlight >}}

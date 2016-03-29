@@ -1,0 +1,10 @@
+override func viewDidLoad() {
+    let gestureRecognizer = UITapGestureRecognizer(target: self, action: “handleTap:”)
+    self.view.addGestureRecognizer(gestureRecognizer)
+}
+
+func handleTap(gestureRecognizer: UIGestureRecognizer) {
+    let alertController = UIAlertController(title: nil, message: “You tapped at \(gestureRecognizer.locationInView(self.view))”, preferredStyle: .Alert)
+    alertController.addAction(UIAlertAction(title: “Dismiss”, style: .Cancel, handler: { _ in }))
+    self.presentViewController(alertController, animated: true, completion: nil)
+}

@@ -3,6 +3,7 @@ date: 2015-07-05T17:56:14-07:00
 title: "Gesture Recognizers"
 htmltitle: "Gesture Recognizers in Swift"
 description: "A place where Objective-C shines through the cracks"
+previewCode: gesture-recognizers
 ---
 
 {{% contrib twitter="klaaspieter" web="www.annema.me" %}}

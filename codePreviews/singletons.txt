@@ -1,0 +1,9 @@
+class SomeManager {
+    static let sharedInstance = SomeManager()
+
+    func doAThing() {
+        // thing
+    }
+}
+
+SomeManager.sharedInstance.doAThing()

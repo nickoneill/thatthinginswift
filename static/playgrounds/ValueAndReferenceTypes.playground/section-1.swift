@@ -7,7 +7,7 @@ import UIKit
 
 // switch the definition of `DemoObject` by commenting out
 // one of two lines below, you'll note the differences produced
-// by the last `println` statement
+// by the last `print` statement
 
 //class DemoObject {
 struct DemoObject {
@@ -21,4 +21,4 @@ obj2.name = "what"
 
 // if you're using the struct type, this should output "hello what"
 // for the class type, this should output "what what"
-println("\(obj1.name) \(obj2.name)")
+print("\(obj1.name) \(obj2.name)")

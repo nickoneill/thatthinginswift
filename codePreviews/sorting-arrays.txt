@@ -1,0 +1,4 @@
+var numbers = [0, 2, 3, 5, 10, 2]
+numbers.sort {
+  return $0 < $1
+}

@@ -37,8 +37,8 @@ func appendToArray(string: String) {
         for i in 0..<2 {
             someArray.append(string)
         }
-        println("appending \(string)")
-        println(someArray)
+        print("appending \(string)")
+        print(someArray)
     }
 }
 
@@ -56,7 +56,7 @@ dispatch_async(dispatch_get_global_queue(queuePriority, 0)) {
 let wait = Int64(2 * NSEC_PER_SEC)
 let time = dispatch_time(DISPATCH_TIME_NOW, wait)
 dispatch_after(time, dispatch_get_global_queue(queuePriority, 0)) { () -> Void in
-    println(someArray)
+    print(someArray)
 }
 
 // continue running so our final array print occurs

@@ -1,0 +1,9 @@
+UIApplication.sharedApplication().registerForRemoteNotifications()
+
+func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
+	print("Got token data! \(deviceToken)")
+}
+
+func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
+	print("Couldn't register: \(error)")
+}

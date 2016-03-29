@@ -1,0 +1,7 @@
+let swiftArray = NSArray(contentsOfFile: filePath) as? [String]
+if let swiftArray = swiftArray {
+    // now we can use Swift-native array methods
+    find(swiftArray, "findable string")
+    // cast back to NSArray to write
+    (swiftArray as NSArray).writeToFile(filePath, atomically: true)
+}

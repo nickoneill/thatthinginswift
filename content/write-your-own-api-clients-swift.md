@@ -3,6 +3,7 @@ title: "Write Your Own API Clients"
 date: "2016-01-23"
 htmltitle: "Write Your Own API Clients in Swift"
 description: "You probably don't need Alamofire"
+previewCode: api-client
 ---
 {{% playground tips="Use this as a base for your favorite API" filename="APIClientPlayground.zip" %}}
 

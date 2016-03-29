@@ -38,7 +38,7 @@ Using completion handlers is easier than declaring them though, thanks to a clev
 {{< highlight swift >}}
 hardProcessingWithString("commands") {
 	(result: String) in
-	println("got back: \(result)")
+	print("got back: \(result)")
 }
 {{< /highlight >}}
 
