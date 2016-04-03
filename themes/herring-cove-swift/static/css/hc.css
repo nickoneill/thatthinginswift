@@ -336,7 +336,7 @@ blockquote
 ul,ol
 {
   font-weight: 200;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 pre
@@ -547,7 +547,14 @@ img
 .post p
 {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 1.6em;
+}
+
+.post li {
+  line-height: 1.4em;
+  margin-bottom: 5px;
   letter-spacing: 0.04em;
 }
 
