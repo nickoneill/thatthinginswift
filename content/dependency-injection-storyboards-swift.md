@@ -41,6 +41,35 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 The first solution I came up with is a `UIViewController` subclass I call `PreparedViewController` and it overrides `prepareForSegue`, investigates the properties of the current view controller and the segue destination controller and automatically copies values that have a given prefix. It's tiny, so we can just show the code and usage:
 
 {{<highlight swift>}}
+class PreparedViewController: UIViewController {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dest = segue.destinationViewController
+
+        let prepProps = Mirror(reflecting: dest).children.filter { ($0.label ?? "").hasPrefix("prepCtx") }
+        for prop in prepProps {
+            let selfProps = Mirror(reflecting: self).children.filter { ($0.label ?? "") == prop.label }
+            if let sameProp = selfProps.first, childObject = sameProp.value as? AnyObject, label = prop.label {
+                dest.setValue(childObject, forKey: label)
+            }
+        }
+    }
+}
+
+class ViewController: PreparedViewController {
+    let prepCtxFloat = 40.5
+    let regularFloat = 20.1
+}
+
+// segue between ViewController and SecondViewController set in Storyboard
+
+class SecondViewController: UIViewController {
+    var prepCtxFloat: Float = 0
+    var regularFloat: Float?
+
+    override func viewDidLoad() {
+        // prepCtxFloat is now 40.5
+    }
+}
 {{</highlight>}}
 
 In this case, `SecondViewController`'s `prepCtxFloat` will be set to 40.5 automatically during the segue because the property names match, `regularFloat` won't move between `ViewController` and `SecondViewController` because it doesn't have the required `prepCtx` prefix.
