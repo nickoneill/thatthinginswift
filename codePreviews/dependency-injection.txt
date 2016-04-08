@@ -1,0 +1,13 @@
+class PreparedViewController: UIViewController {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dest = segue.destinationViewController
+
+        let prepProps = Mirror(reflecting: dest).children.filter { ($0.label ?? "").hasPrefix("prepCtx") }
+        for prop in prepProps {
+            let selfProps = Mirror(reflecting: self).children.filter { ($0.label ?? "") == prop.label }
+            if let sameProp = selfProps.first, childObject = sameProp.value as? AnyObject, label = prop.label {
+                dest.setValue(childObject, forKey: label)
+            }
+        }
+    }
+}

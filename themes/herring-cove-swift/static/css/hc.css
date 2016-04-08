@@ -346,6 +346,7 @@ pre
 }
 .highlight {
   background-color: transparent !important;
+  margin: 20px 0;
 }
 
 #social-wrapper
@@ -556,6 +557,27 @@ img
   line-height: 1.4em;
   margin-bottom: 5px;
   letter-spacing: 0.04em;
+}
+
+.post hr {
+  border-top: 1px solid #ddd;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.post hr:after {
+    content: url(/images/hr.png);
+    display: inline-block;
+    position: relative;
+    top: -0.6em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #f9f9f9;
+}
+
+.post hr.normal:after {
+  content: none;
+  padding: 0;
 }
 
 .post figure {
