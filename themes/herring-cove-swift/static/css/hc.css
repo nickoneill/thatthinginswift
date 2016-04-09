@@ -566,6 +566,24 @@ img
   font-size: 12px;
 }
 
+#mc_embed_signup {
+  background-color:#f9f9f9;
+  box-shadow:1px 1px 0 1px #e8e8e8;
+  padding:10px 40px 0
+}
+
+#mc_embed_signup form {
+  text-align: left !important;
+}
+
+#mc_embed_signup form label {
+  margin-bottom: 0;
+}
+
+#mc_embed_signup p {
+  margin: 8px 0 6px 0;
+}
+
 .user-social
 {
   color:#c4c4c4;
