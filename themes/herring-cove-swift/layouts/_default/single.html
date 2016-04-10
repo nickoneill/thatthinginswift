@@ -9,9 +9,25 @@
   </div>
 </div>
 
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup">
+<form action="//thatthinginswift.us13.list-manage.com/subscribe/post?u=569ad7a933290fe508f8ffdf6&amp;id=ce3db7b867" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <div id="mc_embed_signup_scroll">
+  <label for="mce-EMAIL">Want to get the best Swift development tips by email?</label>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_569ad7a933290fe508f8ffdf6_d3432dd2e8" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <p>You'll get 1-2 emails per month</p>
+  </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+
 <ul class="pager">
-  {{with .Prev}} &nbsp;<li class="previous"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
-  {{with .Next}} &nbsp;<li class="next"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
+  {{with .Prev}} &nbsp;<li class="previous"><a href="{{.Permalink}}"><i class="fa fa-chevron-left"></i> {{.Title}}</a></li>{{end}}
+  {{with .Next}} &nbsp;<li class="next"><a href="{{.Permalink}}">{{.Title}} <i class="fa fa-chevron-right"></i></a></li>{{end}}
 </ul>
 
 {{ template "theme/partials/footer.html" }}
