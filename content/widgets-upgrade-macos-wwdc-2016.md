@@ -76,9 +76,3 @@ Why do I think we'll see a version of macOS and UIKit at WWDC this year? No insi
 This is Apple so it's always hard to say if something is being planned for tomorrow or in four years but the hype is building for WWDC this year and yet another "quality focused" release of OS X would be mighty boring.
 
 Andrew Ambrosino has written [the next best thing about macOS speculation](https://medium.com/swlh/macos-it-s-time-to-take-the-next-step-ee7871ccd3c7), his ideas on convergence of the two platforms and leaving the old navigable filesystem behind are spot on. I don't think he's put a lot of thought into UIKit on the Mac though; __the AppKit vs UIKit label isn't what's keeping Google Inbox and Netflix from creating native apps for the Mac,__ it's the fact that you have to rethink the whole app to adhere to menu bars and keyboard shortcut conventions on a different platform. Taking an iOS-based approach to macOS apps means you have to add a few features to fit in, not rethink the whole structure. Pretty mockups though. Remove the window controls and go full screen and that's about the same thing I expect.
-
-Hit me with some feedback if this kind of thing starts your brain turning. It seems like every time I dig into a related concept, a new connection between iOS and macOS jumps out so I'm sure there's more to infer about where the Mac could be going if we continue down this path.
-
----
-
-Nick O'Neill is an independent iOS developer in San Francisco. He writes about creating clear, concise Swift patterns at That Thing in Swift (http://thatthinginswift.com).
