@@ -1,0 +1,5 @@
+enum TableState {
+    case Loading
+    case Failed
+    case Items([String])
+}

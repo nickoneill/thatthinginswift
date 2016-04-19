@@ -498,6 +498,12 @@ pre
   padding-top:15px
 }
 
+.article-desc {
+  margin: 0px 0 20px 0;
+  font-size: 22px;
+  font-weight: normal;
+}
+
 .meta
 {
   text-shadow:1px 1px #fff;

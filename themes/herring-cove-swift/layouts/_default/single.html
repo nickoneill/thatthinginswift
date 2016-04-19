@@ -1,7 +1,7 @@
 {{ template "theme/partials/header.html" . }}
 <div id="article">
-  <div class="article-title">{{ .Title }}</div>
-  <!-- <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</small></p> <hr/> -->
+  <h1 class="article-title">{{ .Title }}</h1>
+  <h2 class="article-desc">{{ .Description }}</h2>
   <div class="post">
     {{ .Content }}
     <hr class="normal" />
