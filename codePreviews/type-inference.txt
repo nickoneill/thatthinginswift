@@ -1,0 +1,9 @@
+let myCompany: Dictionary<String, AnyObject> = [
+    "employees": [
+        "employee 1": ["attribute": "value"],
+        "employee 2": ["attribute": "value"],
+        "employee 3": ["attribute": "value"],
+        "employee 4": ["attribute": "value"],
+        "employee 5": ["attribute": "value"]
+    ]
+]
