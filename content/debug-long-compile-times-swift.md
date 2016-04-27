@@ -4,7 +4,7 @@ date: "2016-04-26"
 description: "Find problem areas in Xcode and specify type information"
 previewCode: type-inference
 ---
-A quick note today: People seemed interested at the ease in which we can currently make the Swift 2.2 compiler take 12+ hours to compile some basic code because of type inference. From [this post by Matt Nedrich](https://spin.atomicobject.com/2016/04/26/swift-long-compile-time/), we can see a simple example of code taking 
+A quick note today: People seemed interested at the ease in which we can currently make the Swift 2.2 compiler take 12+ hours to compile some basic code because of type inference. From [this post by Matt Nedrich](https://spin.atomicobject.com/2016/04/26/swift-long-compile-time/), we can see a simple example of code taking way too long to figure out what types should be used.
 
 {{<highlight swift>}}
 let myCompany = [
