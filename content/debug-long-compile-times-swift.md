@@ -72,3 +72,11 @@ let myCompany: Dictionary<String, AnyObject> = [
     ]
 ]
 {{</highlight>}}
+
+---
+
+Two updates since just __yesterday__: the bug in question has been [fixed for the next swift release](https://github.com/apple/swift/commit/2cdd7d64e1e2add7bcfd5452d36e7f5fc6c86a03) (3?). This shouldn't be read as "all type inference issues have been fixed", but the problem that was causing this one to grow exponentially was fixed. I should also suggest that if you run into something similar (find them with the method mentioned above!), file a bug at [bugs.swift.org](https://bugs.swift.org) and it *will* get fixed!
+
+Secondly, [Erik Aderstedt](https://twitter.com/erikaderstedt) mentioned a great way to automatically sort your function timing results so you can find the biggest slowdowns:
+
+{{<tweet 725217977314992128>}}

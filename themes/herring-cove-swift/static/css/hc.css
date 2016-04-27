@@ -594,6 +594,10 @@ img
   font-size: 12px;
 }
 
+.post iframe.twitter-tweet {
+  margin-left: 22%;
+}
+
 #mc_embed_signup {
   background-color:#f9f9f9;
   box-shadow:1px 1px 0 1px #e8e8e8;
@@ -929,6 +933,9 @@ pre code {
   transition: all 0.7s ease 0s;
 }
 
+.post iframe.twitter-tweet {
+  margin-left: 0;
+}
 
 .inset {
   padding: 15px;

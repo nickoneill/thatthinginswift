@@ -38,7 +38,7 @@ For the moment the Finder is still switchable in the background because there ar
 
 To be very clear, macOS apps aren't dumb like dashboard widgets, think of them as bigger, better versions of productivity apps on the iPad. They simply lose the extraneous stuff that has driven people towards post-PC devices in the last few years. Refining the experience down to the essentials has long been the core of the Apple experience and the one that serves their customers best. These new apps refine the idea of a desktop app down to the basics, giving it an iOS-y simplicity without losing productivty. AppKit developers will be encouraged to rewrite their apps for the new UIKit (which will really thrill Brent and other AppKit developers), iOS developers are encouraged to bring all their iOS apps onto macOS, and **new macOS apps will only be available via the Mac App Store**.
 
-<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-partner="tweetdeck"><p lang="en" dir="ltr"><a href="https://twitter.com/brentsimmons">@brentsimmons</a> Depends on the future of the Mac. Is it the tool nerds use to make iOS apps or the device your grandma uses to keep photos</p>&mdash; Nick O&#39;Neill (@nickoneill) <a href="https://twitter.com/nickoneill/status/715978928721149953">April 1, 2016</a></blockquote>
+{{<tweet 715978928721149953>}}
 
 I was originally trying to make this point in under 140 characters on Twitter but it ballooned into this post. The idea isn't to dumb down the Mac experience, it's to bring the simplicity and familiarity of iOS apps to the Mac.
 
