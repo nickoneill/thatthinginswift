@@ -1,8 +1,7 @@
 ---
 title: "Migrating from Swift 2 to Swift 3, Part 1"
-date: "2016-09-01"
+date: "2016-09-06"
 description: "Automatic migration from Xcode"
-draft: true
 ---
 As we approach the release of Xcode 8 and Swift 3, we face the inevitable task of upgrading our old Swift 2.x code to the new syntax in Swift 3, including the major reworking of Foundation and UIKit names that has become known as the *Grand Renaming*.
 
