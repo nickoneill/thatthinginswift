@@ -159,24 +159,6 @@ p
 .navbar {
   margin-bottom: 0 !important;
 }
-.treat {
-  background-color: #15b359;
-  margin-bottom: 20px;
-}
-.treat-inner {
-  width:80%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 15px 20px 3px 20px;
-}
-.treat p {
-  color: #fff;
-  font-size: 18px;
-}
-.treat p a {
-  color: #fff;
-  font-weight: 400;
-}
 
 .opensource {
   margin: 20px 0 35px 0;
@@ -187,10 +169,11 @@ p
   margin: 0 0 2px 16px;
 }
 .opensource .os-project {
-  display: none;
+  /*display: none;*/
   padding: 10px 20px;
   background-color: #f8f8f8;
   border-radius: 10px;
+  border: 2px solid #ff422a;
 }
 .opensource .os-project img {
   float: left;

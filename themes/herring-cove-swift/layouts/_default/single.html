@@ -1,4 +1,4 @@
-{{ template "theme/partials/header.html" . }}
+{{ partial "header.html" . }}
 <div id="article">
   <h1 class="article-title">{{ .Title }}</h1>
   <h2 class="article-desc">{{ .Description }}</h2>
@@ -26,8 +26,8 @@
 <!--End mc_embed_signup-->
 
 <ul class="pager">
-  {{with .Prev}} &nbsp;<li class="previous"><a href="{{.Permalink}}"><i class="fa fa-chevron-left"></i> {{.Title}}</a></li>{{end}}
-  {{with .Next}} &nbsp;<li class="next"><a href="{{.Permalink}}">{{.Title}} <i class="fa fa-chevron-right"></i></a></li>{{end}}
+  {{with .NextPage}} &nbsp;<li class="previous"><a href="{{.Permalink}}"><i class="fa fa-chevron-left"></i> {{.Title}}</a></li>{{end}}
+  {{with .PrevPage}} &nbsp;<li class="next"><a href="{{.Permalink}}">{{.Title}} <i class="fa fa-chevron-right"></i></a></li>{{end}}
 </ul>
 
-{{ template "theme/partials/footer.html" }}
+{{ partial "footer.html" }}

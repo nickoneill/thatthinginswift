@@ -1,4 +1,4 @@
-{{ template "theme/partials/header.html" . }}
+{{ partial "header.html" . }}
   <div id="article">
       <h1>{{.Title}}</h1>
   <ul class="posts">
@@ -6,4 +6,4 @@
       <li><span><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
       {{ end }}
   </ul>
-{{ template "theme/partials/footer.html" . }}
+{{ partial "footer.html" . }}
