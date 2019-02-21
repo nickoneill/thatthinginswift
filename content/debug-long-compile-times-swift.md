@@ -41,19 +41,19 @@ One of my favorite features of Swift is type inference so I'm not going to just 
 
 If you suspect that something is taking too long to compile in your Swift project, you should turn on the `debug-time-function-bodies` option for the compiler. In your project in Xcode, go to __Build Settings__ and set __Other Swift Flags__ to `-Xfrontend -debug-time-function-bodies`.
 
-{{<figure src="http://nickoneill-blog.s3.amazonaws.com/images/swift-debug-time.png" title="Set debug-time-function-bodies for the Swift compiler">}}
+{{<figure src="https://nickoneill-blog.s3.amazonaws.com/images/swift-debug-time.png" title="Set debug-time-function-bodies for the Swift compiler">}}
 
 Now that Swift is recording the time taken to compile *each function*, build your project again with ⌘-B and jump over to the __Build Report__ navigator with ⌘-8 where you'll see the most recent build (and possibly some others).
 
-{{<figure src="http://nickoneill-blog.s3.amazonaws.com/images/swift-build-report.png" title="Navigate to the build report with ⌘-8">}}
+{{<figure src="https://nickoneill-blog.s3.amazonaws.com/images/swift-build-report.png" title="Navigate to the build report with ⌘-8">}}
 
 Next, right-click on the build log for the target you built and select __Expand All Transcripts__ to show the detailed build log.
 
-{{<figure src="http://nickoneill-blog.s3.amazonaws.com/images/swift-expand-all-transcripts.png" title="Expand All Transcripts to see the detailed build log">}}
+{{<figure src="https://nickoneill-blog.s3.amazonaws.com/images/swift-expand-all-transcripts.png" title="Expand All Transcripts to see the detailed build log">}}
 
 Finally, you should see a series of green boxes, each representing a file or step in the compilation process. The text inside these boxes may take a moment (or a click) to load properly. If you correctly set up the build flags to show function compilation times, you should see a line of build times along the left. Scan these lines for anything that looks suspect! Anything longer than a hundred milliseconds should be investigated.
 
-{{<figure src="http://nickoneill-blog.s3.amazonaws.com/images/swift-long-compile-function.png" title="Spot long compile times along the left side of the build log">}}
+{{<figure src="https://nickoneill-blog.s3.amazonaws.com/images/swift-long-compile-function.png" title="Spot long compile times along the left side of the build log">}}
 
 We can see our __630ms+__ compile time in `viewDidLoad` where we were testing the type inference earlier. 630ms for just a few lines of code!
 
