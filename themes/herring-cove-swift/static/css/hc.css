@@ -44,7 +44,7 @@ a {
 p
 {
   font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
-  font-weight:200
+  font-weight:300
 }
 
 .intro
@@ -161,6 +161,7 @@ p
 }
 
 .opensource {
+  display: none;
   margin: 20px 0 35px 0;
   padding: 0 40px;
 }
@@ -317,8 +318,8 @@ blockquote
 
 ul,ol
 {
-  font-weight: 200;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 pre
@@ -536,7 +537,7 @@ img
 .post p
 {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.04em;
   line-height: 1.6em;
 }
@@ -576,8 +577,8 @@ img
   font-size: 12px;
 }
 
-.post iframe.twitter-tweet {
-  margin-left: 22%;
+.post .twitter-tweet {
+  margin: 0 auto;
 }
 
 #mc_embed_signup {
