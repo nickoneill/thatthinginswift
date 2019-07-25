@@ -2,6 +2,7 @@
 title: "Read & Share Build Log #1"
 date: 2019-07-25T08:18:43-07:00
 description: "A new highligting app for iOS 13"
+htmltitle: "Read and Share, a new highlighting iOS 13 app in Swift"
 ---
 
 I've been working on a project that I'm aiming to release with iOS 13 later this year, and I've decided to do some build logs with interesting features or new things I'm learning here. I talked a bit about it on twitter:
