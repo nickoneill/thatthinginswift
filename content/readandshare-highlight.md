@@ -19,7 +19,7 @@ Let's get right to the first build log:
 
 ---
 
-The fundamental piece of UI here that everything else feeds in to and out of is the highlighting screen, so that's where I'm starting the app. There are lots of peices that I know how to do already (but maybe not in iOS 13, who knows!) this is at least one peice that I'm going to iterate on a lot, so I might as well get a first version in.
+The fundamental piece of UI here that everything else feeds in to and out of is the highlighting screen, so that's where I'm starting the app. There are lots of pieces that I know how to do already (but maybe not in iOS 13, who knows!) this is at least one piece that I'm going to iterate on a lot, so I might as well get a first version in.
 
 Text comes into the app in various ways - sharing existing highlights from e-readers, copy-pasting chunks of text and even taking camera shots from physical books - and it all hits the highlight screen where you can select the part you want to share. After that you can tweak the book source or play with the share style, but all of these other elements flow through this one interface that needs to be intuitively understandable through a range of use cases.
 
