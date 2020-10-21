@@ -1,6 +1,9 @@
 [build]
 publish = "public"
 
+[context.production.environment]
+HUGO_VERSION = "0.54.0"
+
 [[redirects]]
   from = "/automatic-migration-to-swift-3-with-xcode/"
   to = "https://raquo.net/2016/09/automatic-migration-to-swift-3-with-xcode/"
