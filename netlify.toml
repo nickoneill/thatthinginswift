@@ -1,8 +1,188 @@
 [build]
 publish = "public"
 
-[context.production.environment]
-HUGO_VERSION = "0.54.0"
+[[redirects]]
+  from = "/automatic-migration-to-swift-3-with-xcode/"
+  to = "https://raquo.net/2016/09/automatic-migration-to-swift-3-with-xcode/"
+  status = 301
+  force = true
 
-[context.deploy-preview]
-HUGO_VERSION = "0.54.0"
+[[redirects]]
+  from = "/background-threads/"
+  to = "https://raquo.net/2014/07/background-threads/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/basic-table-view-app-video-swift/"
+  to = "https://raquo.net/2016/03/basic-table-view-app-video-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/completion-handlers/"
+  to = "https://raquo.net/2014/06/completion-handlers/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/debug-long-compile-times-swift/"
+  to = "https://raquo.net/2016/04/debug-long-compile-times-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dependency-injection-storyboards-swift/"
+  to = "https://raquo.net/2016/04/dependency-injection-storyboards-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/documentation-and-quick-help/"
+  to = "https://raquo.net/2014/08/documentation-and-quick-help/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/filling-table-view-cells/"
+  to = "https://raquo.net/2014/08/filling-table-view-cells/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guard-statement-swift/"
+  to = "https://raquo.net/2016/01/guard-statement-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ibaction-and-iboutlet/"
+  to = "https://raquo.net/2014/06/ibaction-and-iboutlet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ios-permission-dialogs-swift/"
+  to = "https://raquo.net/2015/05/ios-permission-dialogs-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/json-serialization/"
+  to = "https://raquo.net/2014/06/json-serialization/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kill-your-viewdidload/"
+  to = "https://raquo.net/2016/03/kill-your-viewdidload/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/method-signatures/"
+  to = "https://raquo.net/2014/07/method-signatures/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pantry-cache-struct-swift/"
+  to = "https://raquo.net/2015/11/pantry-cache-struct-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/readandshare-highlight/"
+  to = "https://raquo.net/2019/07/readandshare-highlight/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/remote-notifications/"
+  to = "https://raquo.net/2014/07/remote-notifications/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/should-you-use-swiftui-in-your-app/"
+  to = "https://raquo.net/2019/08/should-you-use-swiftui-in-your-app/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/singletons/"
+  to = "https://raquo.net/2014/07/singletons/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sort-and-sorted/"
+  to = "https://raquo.net/2015/02/sort-and-sorted/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/string-formatting/"
+  to = "https://raquo.net/2014/06/string-formatting/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/strings-starting-with-swift/"
+  to = "https://raquo.net/2015/04/strings-starting-with-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/switch-unwrap-shortcut/"
+  to = "https://raquo.net/2015/03/switch-unwrap-shortcut/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/switch-unwrap-shortcut/"
+  to = "https://raquo.net/2015/03/switch-unwrap-shortcut/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/table-data-sources/"
+  to = "https://raquo.net/2014/07/table-data-sources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/upgrade-tableview-loading-state/"
+  to = "https://raquo.net/2016/04/upgrade-tableview-loading-state/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/upgrade-tableview-loading-state/"
+  to = "https://raquo.net/2016/04/upgrade-tableview-loading-state/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/value-and-reference-types/"
+  to = "https://raquo.net/2014/09/value-and-reference-types/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/widgets-upgrade-macos-wwdc-2016/"
+  to = "https://raquo.net/2016/04/widgets-upgrade-macos-wwdc-2016/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/write-your-own-api-clients-swift/"
+  to = "https://raquo.net/2016/01/write-your-own-api-clients-swift/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/writing-documents-directory-swift/"
+  to = "https://raquo.net/2015/04/writing-documents-directory-swift/"
+  status = 301
+  force = true
